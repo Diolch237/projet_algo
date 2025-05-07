@@ -1,0 +1,26 @@
+ALGORITHME Analyse phrases;
+VAR phrase: chaine
+    i, long, nbmots, nbvoyelles: entier
+    liste_voyelle: tableau;
+
+Début
+//initialisation
+long=0;
+nbmot=0;
+nbvoyelle=0;
+liste_voyelle=["a","e","i","o","u","y","A","E","I","O","U","Y"]
+LIRE(phrase)
+Tant que (phrase[i] dans tous les voyelles) Faire
+nbvoyelles=nbvoyelles+1
+Si (phrase[i] est different à " ") Faire
+long=long+1
+Finsi
+Si (phrase[i] = " " et i>0) Faire
+nbmots=nbmots+1
+Finsi
+i=i+1
+Fintantque
+Ecrire("longueur est:", long)
+Ecrire("nombre de mot est:", nbmots)
+Ecrire("nombre de voyelles", nbvoyelles)
+Fin
